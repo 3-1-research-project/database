@@ -8,7 +8,7 @@ on:
 
 env:
     REGISTRY: ghcr.io
-    IMAGE_NAME: waec-t/postgres
+    IMAGE_NAME: 3-1-research-project/postgres
 
 jobs:
     build-and-publish-image:
@@ -30,7 +30,7 @@ jobs:
               with:
                 registry: ${{ env.REGISTRY }}
                 username: ${{ github.actor }}
-                password: ${{ secrets.PAT }}
+                password: ${{ secrets.GITHUB_PAT }}
 
             - name: Extract metadata (tags, labels) for Docker
               id: meta
