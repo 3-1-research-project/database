@@ -1,5 +1,7 @@
 FROM postgres:17
 
+LABEL version="17.0.0"
+
 COPY schema.sql /docker-entrypoint-initdb.d/schema.sql
 ENV POSTGRES_DB=waect
 ENV POSTGRES_USER=user
