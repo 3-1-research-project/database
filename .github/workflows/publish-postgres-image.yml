@@ -29,7 +29,6 @@ jobs:
               run: |
                 POSTGRES_VERSION=$(grep -oP '(?<=FROM postgres:)\d+' postgres/dockerfile)
                 echo "POSTGRES_VERSION=$POSTGRES_VERSION" >> $GITHUB_ENV
-                ag
             - name: Log in to the Container registry
               uses: docker/login-action@v2
               with:
